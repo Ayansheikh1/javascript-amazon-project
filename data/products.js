@@ -656,5 +656,30 @@ const products = [
       "apparel",
       "mens"
     ]
-  }
+  },
+
+  {
+    
+      id: "id1",
+      image: "images/products/whey-protein.jpg",
+      name: "Optimum Nutrition (ON) Gold Standard 100% Whey (2 lbs/907 g) (Double Rich Chocolate) ",
+      rating: {
+        stars: 4.5,
+        count: 97656
+      },
+      priceCents: 3780,
+  },
+
+  {
+    
+    id: "id2",
+    image: "images/products/iphone.jpg",
+    name: "Apple iPhone 15 Pro Max (256 GB) - Natural Titanium",
+    rating: {
+      stars: 4.5,
+      count: 317
+    },
+    priceCents:  182892,
+}
+
 ];
