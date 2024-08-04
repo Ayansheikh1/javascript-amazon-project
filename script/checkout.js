@@ -94,4 +94,4 @@ cartItemHtml += `<div class="cart-item-container">
  `;
 });
 
-console.log(cartItemHtml);
+document.querySelector('.js-order-summary').innerHTML= cartItemHtml;
