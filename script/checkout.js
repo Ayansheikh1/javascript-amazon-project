@@ -2,7 +2,9 @@ import {cart, removeFromCart} from '../data/cart.js';
 import {products} from '../data/products.js';
 import { formatCurrency } from './utils/money.js';
 
+
 let cartItemHtml;
+updateCartQuantity();
 
 cart.forEach((cartItem) => {
 
@@ -110,8 +112,23 @@ link.addEventListener('click',() => {
 
  
  container.remove();
+ updateCartQuantity();
 });
 
 });
+
+function updateCartQuantity(){
+  let cartQuantity = 0;
+
+  cart.forEach((cartItem) => {
+    cartQuantity += cartItem.quantity;
+  });
+
+  document.querySelector('.js-cart-quantity')
+    .innerHTML = cartQuantity;
+
+}
+
+
 
 
