@@ -38,11 +38,12 @@ cartItemHtml += `<div class="cart-item-container js-cart-item-container-${matchi
           <div class="product-quantity">
             <span>
               Quantity: <span class="quantity-label">${cartItem.quantity}</span>
+              <input class="quantity-input">
             </span>
             <span class="update-quantity-link link-primary js-update-link" data-product-id = "${matchingProduct.id}">
               Update
             </span>
-            <input class="quantity-input">
+           
             <span class="save-quantity-link link-primary">
             Save
             </span>
