@@ -39,13 +39,16 @@ cartItemHtml += `<div class="cart-item-container js-cart-item-container-${matchi
             <span>
               Quantity: <span class="quantity-label">${cartItem.quantity}</span>
             </span>
-            <span class="update-quantity-link link-primary">
+            <span class="update-quantity-link link-primary js-update-link" data-product-id = "${matchingProduct.id}">
               Update
             </span>
+            <input class="quantity-input">
+            <span class="save-quantity-link link-primary" >Save</span>
             <span class="delete-quantity-link link-primary js-delete-link" 
             data-product-id = "${matchingProduct.id}">
               Delete
             </span>
+            
           </div>
         </div>
 
@@ -125,6 +128,16 @@ function updateCartQuantity(){
 
 }
 
+
+
+document.querySelectorAll('.js-update-link').
+forEach((link) => {
+  link.addEventListener('click', () =>{
+    const productId = link.dataset.productId;
+    
+  });
+  
+})
 
 
 
