@@ -119,7 +119,18 @@
   margin-left: 3px;
 }
 .quantity-input{
+  
   width:30px;
+}
+.save-quantity-link, .quantity-input{
+  display: none;
+} 
+
+.is-editing-quantity .quantity-input{
+  display: initial;
+}
+.is-editing-quantity .save-quantity-link{
+  display: initial;
 }
 
 @media (max-width: 1000px) {
