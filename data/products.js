@@ -692,6 +692,18 @@ export const products = [
   priceCents: 10900,
  
   
+},
+{
+  id: "id4",
+  image: "images/products/shoes.jpg",
+  name: " Red Tape Lifestyle Sneaker Shoes for Men | Elegantly Rounded Front, Soothing Insole & Impact-Resistant Comfort",
+  rating: {
+    stars: 1.5,
+    count: 700
+  },
+  priceCents: 2357,
+ 
+  
 }
 
 ];
