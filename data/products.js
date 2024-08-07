@@ -680,6 +680,18 @@ export const products = [
       count: 317
     },
     priceCents:  182892,
+},
+{
+  id: "id3",
+  image: "images/products/ram.jpg",
+  name: " Crucial Pro Overclocking RAM 32GB Kit (2x16GB) DDR5 6000MT/s (or 5600MT/s) Desktop Memory CP2K16G60C36U5B",
+  rating: {
+    stars: 4.5,
+    count: 50
+  },
+  priceCents: 10900,
+ 
+  
 }
 
 ];
