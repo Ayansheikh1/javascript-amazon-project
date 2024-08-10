@@ -4,7 +4,6 @@ import { formatCurrency } from './utils/money.js';
 
 
 
-let productsHTML = '';
 
 
 products.forEach((product) => {
