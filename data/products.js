@@ -704,6 +704,16 @@ export const products = [
   priceCents: 2357,
  
   
+},
+{
+  id: "id5",
+  image: "images/products/samsung-phone.jpg",
+  name: " Samsung Galaxy S24 Ultra 5G AI Smartphone (Titanium Black, 12GB, 256GB Storage)",
+  rating: {
+    stars: 4,
+    count: 127
+  },
+  priceCents: 155999,
 }
 
 ];
