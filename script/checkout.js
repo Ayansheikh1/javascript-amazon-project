@@ -60,10 +60,16 @@ cartItemHtml += `<div class="cart-item-container js-cart-item-container-${matchi
             
           </div>
         </div>
-            ${deliveryOptionHTML(matchingProduct)}
+         <div class="delivery-options">
+        <div class="delivery-options-title">
+          Choose a delivery option:
+        </div>
+
+         ${deliveryOptionHTML(matchingProduct)}
       
         </div>
       </div>
+    </div>  
     
  `;
 });
@@ -81,14 +87,13 @@ let html = '';
   const priceString = deliveryOption.priceCents === 0 
   ?'FREE'
   : `$${formatCurrency(deliveryOption.priceCents)} -`;
+  
+  const isChecked = 
 
    html += `
-    <div class="delivery-options">
-        <div class="delivery-options-title">
-          Choose a delivery option:
-        </div>
         <div class="delivery-option">
-          <input type="radio" checked
+          <input type="radio" 
+            checked
             class="delivery-option-input"
             name="delivery-option-${matchingProduct.id}">
           <div>
@@ -100,7 +105,7 @@ let html = '';
             </div>
           </div>
         </div>
-       </div> 
+      
   `
  });
 
