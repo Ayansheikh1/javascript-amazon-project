@@ -717,13 +717,13 @@ export const products = [
 },
 {
   id: "id6",
-  image: "images/products/samsung-phone.jpg",
-  name: " Samsung Galaxy S24 Ultra 5G AI Smartphone (Titanium Black, 12GB, 256GB Storage)",
+  image: "images/products/graphic-card.jpg",
+  name: "ASUS Rog Strix Geforce RTX 4090 White OC Edition Gaming Graphics Card ",
   rating: {
     stars: 4,
-    count: 127
+    count: 20
   },
-  priceCents: 155999,
+  priceCents: 300730,
 }
 
 ];
