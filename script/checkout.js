@@ -65,7 +65,7 @@ cartItemHtml += `<div class="cart-item-container js-cart-item-container-${matchi
           Choose a delivery option:
         </div>
 
-         ${deliveryOptionHTML(matchingProduct)}
+         ${deliveryOptionHTML(matchingProduct, cartItem)}
       
         </div>
       </div>
@@ -75,7 +75,7 @@ cartItemHtml += `<div class="cart-item-container js-cart-item-container-${matchi
 });
 
 
-function deliveryOptionHTML(matchingProduct) {
+function deliveryOptionHTML(matchingProduct,cartItem) {
 let html = '';
   
  deliveryOptions.forEach((deliveryOption) => {
@@ -88,12 +88,12 @@ let html = '';
   ?'FREE'
   : `$${formatCurrency(deliveryOption.priceCents)} -`;
   
-  const isChecked = 
+  const isChecked =  deliveryOption.id === cartItem.deliveryOptionId;
 
    html += `
         <div class="delivery-option">
           <input type="radio" 
-            checked
+            ${isChecked ?'checked' : ''}
             class="delivery-option-input"
             name="delivery-option-${matchingProduct.id}">
           <div>
