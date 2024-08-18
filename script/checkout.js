@@ -8,7 +8,7 @@ import { deliveryOptions } from '../data/deliveryOption.js';
 
 
 
-
+function renderOrderSummary() {
 let cartItemHtml;
 updateCartQuantity();
 
@@ -213,8 +213,16 @@ document.querySelectorAll('.js-delivery-option')
   element.addEventListener('click', () => {
     const {productId , deliveryOptionId} = element.dataset;
     updateDeliveryOption(productId, deliveryOptionId);    
+    renderOrderSummary();
+
   });
 });
+
+
+}
+
+
+renderOrderSummary();
 
 
 
