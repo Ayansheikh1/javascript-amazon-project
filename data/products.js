@@ -742,6 +742,16 @@ export const products = [
     count: 20
   },
   priceCents: 300730,
+},
+{
+  id: "id7",
+  image: "images/products/macbook.jpg",
+  name: "Apple 2024 MacBook Air 13″ Laptop with M3 chip ",
+  rating: {
+    stars: 4,
+    count: 23
+  },
+  priceCents: 152,268,
 }
 
 ];
