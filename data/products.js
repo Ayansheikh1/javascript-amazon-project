@@ -751,7 +751,7 @@ export const products = [
     stars: 4,
     count: 23
   },
-  priceCents: 152,268,
+  priceCents: 152268,
 }
 
 ];
