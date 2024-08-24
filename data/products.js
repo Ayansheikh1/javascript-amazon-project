@@ -752,6 +752,16 @@ export const products = [
     count: 23
   },
   priceCents: 152268,
+},
+{
+  id: "id8",
+  image: "images/products/watch.jpg",
+  name: "Casio G-Shock Origin Digital Black Dial Men's Watch ",
+  rating: {
+    stars: 5,
+    count: 2
+  },
+  priceCents: 57077,
 }
 
 ];
