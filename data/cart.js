@@ -1,5 +1,4 @@
 
-
 export let cart;
 loadFromStorage();
 
@@ -40,6 +39,7 @@ export function addToCart(productId){
   );
 
 
+ 
   const quantity = Number(quantitySelector.value);
 
   if (matchingItem) {
