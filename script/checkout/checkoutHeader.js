@@ -1,4 +1,5 @@
-import { cart } from "../../data/cart.js";
+import '../../data/cart-oop.js';
+import { cart } from '../../data/cart.js';
 
 
 export function renderCheckoutHeader(){
