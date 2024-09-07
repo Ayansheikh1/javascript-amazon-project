@@ -1,4 +1,4 @@
-import '../../data/cart-oop.js';
+import '../../data/cart-class.js';
 import { cart } from '../../data/cart.js';
 
 
