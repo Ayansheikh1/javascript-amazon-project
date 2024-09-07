@@ -14,6 +14,23 @@ export function getProduct(productId){
 }
 
 
+class Product{
+  id;
+  image;
+  name;
+  rating;
+  priceCents;
+
+  constructor(productDetail){
+    this.id = productDetail.id;
+    this.image = productDetail.image;
+    this.name = productDetail.name;
+    this.rating = productDetail.rating;
+    this.priceCents = productDetail.priceCents;
+  }
+
+  
+}
 
 
 export const products = [
@@ -774,4 +791,9 @@ export const products = [
   priceCents: 1000,
 }
 
-];
+].map((productDetail) =>{
+
+ return new Product(productDetail);
+
+});
+
