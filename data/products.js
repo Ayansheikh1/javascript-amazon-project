@@ -1,10 +1,10 @@
 import { formatCurrency } from "../script/utils/money.js";
 
-export function getProduct(productId){
+export function getProduct(productId) {
   let matchingProduct;
-  
+
   products.forEach((productItem) => {
-    if(productId === productItem.id ){
+    if (productId === productItem.id) {
       matchingProduct = productItem;
     }
 
@@ -14,14 +14,14 @@ export function getProduct(productId){
 }
 
 
-class Product{
+class Product {
   id;
   image;
   name;
   rating;
   priceCents;
 
-  constructor(productDetail){
+  constructor(productDetail) {
     this.id = productDetail.id;
     this.image = productDetail.image;
     this.name = productDetail.name;
@@ -29,16 +29,39 @@ class Product{
     this.priceCents = productDetail.priceCents;
   }
 
-  getStarsUrl(){
+  getStarsUrl() {
     return `images/ratings/rating-${this.rating.stars * 10}.png`;
   }
 
-  getPrice(){
+  getPrice() {
     return `$${formatCurrency(this.priceCents)}`;
   }
 
-  
+  extraInfoHTML() {
+    return '';
+  }
+
 }
+
+class Clothing extends Product {
+
+  sizeChartLink;
+
+  constructor(productDetail) {
+    super(productDetail);
+    this.sizeChartLink = productDetail.sizeChartLink;
+  }
+
+  extraInfoHTML() {
+    return `
+    <a href="images/clothing-size-chart.png" target="_blank">
+      SizeList
+    </a>
+    `;
+  }
+
+}
+
 
 
 export const products = [
@@ -702,19 +725,19 @@ export const products = [
   },
 
   {
-    
-      id: "id1",
-      image: "images/products/whey-protein.jpg",
-      name: "Optimum Nutrition (ON) Gold Standard 100% Whey (2 lbs/907 g) (Double Rich Chocolate) ",
-      rating: {
-        stars: 4.5,
-        count: 97656
-      },
-      priceCents: 3780,
+
+    id: "id1",
+    image: "images/products/whey-protein.jpg",
+    name: "Optimum Nutrition (ON) Gold Standard 100% Whey (2 lbs/907 g) (Double Rich Chocolate) ",
+    rating: {
+      stars: 4.5,
+      count: 97656
+    },
+    priceCents: 3780,
   },
 
   {
-    
+
     id: "id2",
     image: "images/products/iphone.jpg",
     name: "Apple iPhone 15 Pro Max (256 GB) - Natural Titanium",
@@ -722,86 +745,89 @@ export const products = [
       stars: 4.5,
       count: 317
     },
-    priceCents:  182892,
-},
-{
-  id: "id3",
-  image: "images/products/ram.jpg",
-  name: " Crucial Pro Overclocking RAM 32GB Kit (2x16GB) DDR5 6000MT/s (or 5600MT/s) Desktop Memory CP2K16G60C36U5B",
-  rating: {
-    stars: 4.5,
-    count: 50
+    priceCents: 182892,
   },
-  priceCents: 10900,
- 
-  
-},
-{
-  id: "id4",
-  image: "images/products/shoes.jpg",
-  name: " Red Tape Lifestyle Sneaker Shoes for Men | Elegantly Rounded Front, Soothing Insole & Impact-Resistant Comfort",
-  rating: {
-    stars: 1.5,
-    count: 700
-  },
-  priceCents: 2357,
- 
-  
-},
-{
-  id: "id5",
-  image: "images/products/samsung-phone.jpg",
-  name: " Samsung Galaxy S24 Ultra 5G AI Smartphone (Titanium Black, 12GB, 256GB Storage)",
-  rating: {
-    stars: 4,
-    count: 127
-  },
-  priceCents: 155999,
-},
-{
-  id: "id6",
-  image: "images/products/graphic-card.jpg",
-  name: "ASUS Rog Strix Geforce RTX 4090 White OC Edition Gaming Graphics Card ",
-  rating: {
-    stars: 4,
-    count: 20
-  },
-  priceCents: 300730,
-},
-{
-  id: "id7",
-  image: "images/products/macbook.jpg",
-  name: "Apple 2024 MacBook Air 13″ Laptop with M3 chip ",
-  rating: {
-    stars: 4,
-    count: 23
-  },
-  priceCents: 152268,
-},
-{
-  id: "id8",
-  image: "images/products/watch.jpg",
-  name: "Casio G-Shock Origin Digital Black Dial Men's Watch ",
-  rating: {
-    stars: 5,
-    count: 2
-  },
-  priceCents: 57077,
-},
-{
-  id: "id9",
-  image: "images/products/black-tshirt.jpg",
-  name: "Round Neck Half Sleeve Regular Fit Men's Printed Cotton T-Shirt ",
-  rating: {
-    stars: 5,
-    count: 500
-  },
-  priceCents: 1000,
-}
+  {
+    id: "id3",
+    image: "images/products/ram.jpg",
+    name: " Crucial Pro Overclocking RAM 32GB Kit (2x16GB) DDR5 6000MT/s (or 5600MT/s) Desktop Memory CP2K16G60C36U5B",
+    rating: {
+      stars: 4.5,
+      count: 50
+    },
+    priceCents: 10900,
 
-].map((productDetail) =>{
 
- return new Product(productDetail);
+  },
+  {
+    id: "id4",
+    image: "images/products/shoes.jpg",
+    name: " Red Tape Lifestyle Sneaker Shoes for Men | Elegantly Rounded Front, Soothing Insole & Impact-Resistant Comfort",
+    rating: {
+      stars: 1.5,
+      count: 700
+    },
+    priceCents: 2357,
+
+
+  },
+  {
+    id: "id5",
+    image: "images/products/samsung-phone.jpg",
+    name: " Samsung Galaxy S24 Ultra 5G AI Smartphone (Titanium Black, 12GB, 256GB Storage)",
+    rating: {
+      stars: 4,
+      count: 127
+    },
+    priceCents: 155999,
+  },
+  {
+    id: "id6",
+    image: "images/products/graphic-card.jpg",
+    name: "ASUS Rog Strix Geforce RTX 4090 White OC Edition Gaming Graphics Card ",
+    rating: {
+      stars: 4,
+      count: 20
+    },
+    priceCents: 300730,
+  },
+  {
+    id: "id7",
+    image: "images/products/macbook.jpg",
+    name: "Apple 2024 MacBook Air 13″ Laptop with M3 chip ",
+    rating: {
+      stars: 4,
+      count: 23
+    },
+    priceCents: 152268,
+  },
+  {
+    id: "id8",
+    image: "images/products/watch.jpg",
+    name: "Casio G-Shock Origin Digital Black Dial Men's Watch ",
+    rating: {
+      stars: 5,
+      count: 2
+    },
+    priceCents: 57077,
+  },
+  {
+    id: "id9",
+    image: "images/products/black-tshirt.jpg",
+    name: "Round Neck Half Sleeve Regular Fit Men's Printed Cotton T-Shirt ",
+    rating: {
+      stars: 5,
+      count: 500
+    },
+    priceCents: 1000,
+    type: "clothing"
+  }
+
+].map((productDetail) => {
+  if (productDetail.type === 'clothing') {
+    return new Clothing(productDetail);
+  }
+  return new Product(productDetail);
 
 });
 
