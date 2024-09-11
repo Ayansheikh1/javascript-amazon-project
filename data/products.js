@@ -856,7 +856,18 @@ export const products = [
     },
     priceCents: 1000,
     type: "clothing"
+  },{
+    id: "id10",
+    image: "images/products/oven.jpg",
+    name: "IFB 30 L Convection Microwave Oven ",
+    rating: {
+      stars: 4,
+      count: 5
+    },
+    priceCents: 100000,
+    
   }
+
 
 ].map((productDetail) => {
   if (productDetail.type === 'clothing') {
