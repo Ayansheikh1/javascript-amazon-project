@@ -866,8 +866,18 @@ export const products = [
     },
     priceCents: 100000,
     
+  },
+  {
+    id: "id11",
+    image: "images/products/ps5.jpg",
+    name: "Sony PlayStation®5 Console (slim) ",
+    rating: {
+      stars: 4,
+      count: 100
+    },
+    priceCents: 1099880,
+    
   }
-
 
 ].map((productDetail) => {
   if (productDetail.type === 'clothing') {
