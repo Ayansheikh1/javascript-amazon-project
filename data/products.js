@@ -877,6 +877,16 @@ export const products = [
     },
     priceCents: 1099880,
     
+  },
+  {
+    id: "id12",
+    image: "images/products/ipad.jpg",
+    name: "Apple 2021 iPad Pro M1 chip (12.9-inch/32.77 cm, Wi-Fi, 128GB) - Silver (5th Generation) ",
+    rating: {
+      stars: 3,
+      count: 200
+    },
+    priceCents: 2099880,
   }
 
 ].map((productDetail) => {
