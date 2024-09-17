@@ -126,6 +126,8 @@ class Cart {
     this.saveStorage();
   
   };
+
+  
 }
 
 
@@ -139,6 +141,26 @@ console.log(cart);
 console.log(businessCart);
 
 console.log(cart instanceof Cart);
+
+
+export function loadCart(fun){  
+
+  const xhr = new XMLHttpRequest();
+  xhr.addEventListener('load', () => {
+    console.log(xhr.response);
+    fun();
+    });
+
+
+  xhr.open('GET', 'https://supersimplebackend.dev/products');
+  xhr.send();
+
+ }
+
+
+
+
+
 
 
 
