@@ -103,7 +103,7 @@ export class Appliance extends Product{
       return new Product(productDetail);
     });
    
-    console.log('load products');
+    // console.log('load products');
 
    
   }).catch((error) => {

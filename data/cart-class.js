@@ -137,17 +137,17 @@ const businessCart = new Cart('cart-business');
 
 
 
-console.log(cart);
-console.log(businessCart);
+// console.log(cart);
+// console.log(businessCart);
 
-console.log(cart instanceof Cart);
+// console.log(cart instanceof Cart);
 
 
 export function loadCart(fun){  
 
   const xhr = new XMLHttpRequest();
   xhr.addEventListener('load', () => {
-    console.log(xhr.response);
+    //console.log(xhr.response);
     fun();
     });
 
