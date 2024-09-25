@@ -12,10 +12,17 @@ import { loadCart, loadCartFetch } from '../data/cart-class.js';
    try {
     /*throw 'error1'; manual error*/ 
 
+   await Promise.all([
+      loadProductsFetch(),
+      loadCartFetch()
+    ]);
+    
+    /*
     await loadProductsFetch();
-
     await loadCartFetch();
-  
+    */
+
+
     /*
     await new Promise((resolve, reject) => {
       //throw 'error2';
