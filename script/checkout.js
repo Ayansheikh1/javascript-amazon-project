@@ -4,7 +4,7 @@ import { renderPaymentSummary } from './checkout/paymentSummary.js';
 import { renderCheckoutHeader } from './checkout/checkoutHeader.js';
 //import '../data/car.js';
 import { loadProducts, loadProductsFetch } from '../data/products.js';
-import { loadCart } from '../data/cart-class.js';
+import { loadCart, loadCartFetch } from '../data/cart-class.js';
 
 
 
@@ -13,14 +13,18 @@ import { loadCart } from '../data/cart-class.js';
     /*throw 'error1'; manual error*/ 
 
     await loadProductsFetch();
+
+    await loadCartFetch();
   
+    /*
     await new Promise((resolve, reject) => {
       //throw 'error2';
-      loadCart(() => {
+      loadCartFetch(() => {
         //reject('error3');
         resolve();
       });
     });
+    */
 
 } catch (error) {
   console.log('Unexpected error. Please try again later.');
