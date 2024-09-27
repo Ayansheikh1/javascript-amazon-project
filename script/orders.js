@@ -40,6 +40,8 @@ ordersHTML = `
           
 `;
 
+document.querySelector('.js-orders-grid').innerHTML += ordersHTML;
+
 });
 
 function productsListHTML(order){
@@ -88,7 +90,7 @@ function productsListHTML(order){
   return productsListHTML;
 }
 
-document.querySelector('.js-orders-grid').innerHTML = ordersHTML;
+
 
 
 }
