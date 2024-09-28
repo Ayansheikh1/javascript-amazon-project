@@ -12,7 +12,7 @@ let ordersHTML = '';
 orders.forEach((order) =>{
   const orderTimeString = dayjs(order.orderTime).format('MMMM D');
 
-ordersHTML = `
+ordersHTML += `
 <div class="order-container">
           
           <div class="order-header">
@@ -23,7 +23,7 @@ ordersHTML = `
               </div>
               <div class="order-total">
                 <div class="order-header-label">Total:</div>
-                <div>$${formatCurrency(order.totalCents)}</div>
+                <div>$${formatCurrency(order.totalCostCents)}</div>
               </div>
             </div>
 
@@ -40,7 +40,7 @@ ordersHTML = `
           
 `;
 
-document.querySelector('.js-orders-grid').innerHTML += ordersHTML;
+
 
 });
 
@@ -51,7 +51,7 @@ function productsListHTML(order){
   order.products.forEach((productDetails) => {
     const product = getProduct(productDetails.productId);
 
-    productsListHTML = `
+    productsListHTML += `
     
             <div class="product-image-container">
               <img src="${product.image}">
@@ -86,11 +86,14 @@ function productsListHTML(order){
             
          
     `;
+    
   });
+
   return productsListHTML;
+ 
 }
 
-
+document.querySelector('.js-orders-grid').innerHTML = ordersHTML;
 
 
 }
