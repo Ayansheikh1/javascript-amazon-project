@@ -20,6 +20,7 @@ export class Product {
   name;
   rating;
   priceCents;
+  keywords;
 
   constructor(productDetail) {
     this.id = productDetail.id;
@@ -27,6 +28,7 @@ export class Product {
     this.name = productDetail.name;
     this.rating = productDetail.rating;
     this.priceCents = productDetail.priceCents;
+    this.keywords = productDetail.keywords;
   }
 
   getStarsUrl() {
@@ -50,6 +52,7 @@ export class Clothing extends Product {
   constructor(productDetail) {
     super(productDetail);
     this.sizeChartLink = productDetail.sizeChartLink;
+
   }
 
   extraInfoHTML() {
@@ -71,6 +74,7 @@ export class Appliance extends Product{
     super(productDetail);
     this.instructionsLink = productDetail.instructionsLink;
     this.warrantyLink = productDetail.warrantyLink;
+    
   }
 
   extraInfoHTML(){
